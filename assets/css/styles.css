@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Chewy');
+
+/* Navbar */
+.abstract-navbar {
+
+    width: 100%;
+    background-color: #0f0f0f; 
+    color: #efefef;   
+    height: auto;
+    padding: 20px;
+
+}
+
+.nav-items-container {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-items-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-items-container ul li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.abstract-logo {
+    font-family: 'Chewy', cursive;
+    font-size: 36px;
+    font-weight: 100;
+    width: 100%;
+    margin: auto;
+}
+
+/* Items */
+.item-card {
+    /* border: 1px solid #929292; */
+    border-radius: 10px;
+    padding: 10px 20px 20px 20px;
+    text-transform: uppercase;
+}
+
+.item-image-container {
+    width: 100%;
+}
+
+.item-title {
+    margin-bottom: 0;
+}
+
+.item-price {
+    text-transform: none;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #e62e00;
+    font-weight: 500;
+}
+
+.item-support {
+    font-size: 10px;
+}
+
+.item-button {
+    background-color: #e62e00;
+    color: #efefef;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.item-button:hover {
+    background-color: #ff3705;
+}
+
+.pagination-container {
+    width: 100%;
+}

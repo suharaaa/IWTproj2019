@@ -1,0 +1,19 @@
+.item-button {
+    background-color: #b75d69;
+    color: #efefef;
+    font-weight: bolder;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-color: transparent;
+}
+
+.item-button:hover {
+    background-color: #9b4e58;
+}
+
+.checkout-form {
+    background: #ededed;
+}
+

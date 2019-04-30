@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <title>
+            Checkout
+        </title>
+            <link rel="stylesheet"  href="assets/css/womens.css">
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+            <script src="./assets/js/bootstrap.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            
+    </head>
+    <header>
+
+    </header>
+    <body>
+     <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-8 ">
+            <h2 class="item-title"> C H E C K O U T </h2><br>
+               <form method="post">
+                  <div  class= "checkout-form">
+                      <h4>1. Shipping Adress</h4><br>
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstname">First name</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Jacob"  required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastname">Last name</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Salvator"  required> 
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" placeholder="507 S Fisk St" required> 
+                    </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">City</label>
+                    <input type="text" class="form-control" id="validationTooltip03" placeholder="Green Bay" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="validationTooltip03">Country</label>
+                    <input type="text" class="form-control" id="validationTooltip03" placeholder="United States" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid country.
+                    </div>
+                  </div>
+                </div> 
+                    <div class="form-row">                  
+                      <div class="col-md-6 mb-3">
+                        <label for="validationTooltip04">State</label>
+                        <input type="text" class="form-control" id="validationTooltip04" placeholder="Wisconsin" required>
+                        <div class="invalid-tooltip">
+                          Please provide a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="validationTooltip05">Zip</label>
+                        <input type="text" class="form-control" id="validationTooltip05" placeholder="54303-2175" required>
+                        <div class="invalid-tooltip">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">                  
+                      <div class="col-md-6 mb-3">
+                        <label for="validationTooltip04">Phone Number</label>
+                        <input type="text" class="form-control" id="validationTooltip04" placeholder="(060) 458-9754" >
+                        
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="validationTooltip05">E-mail</label>
+                        <input type="text" class="form-control" id="validationTooltip05" placeholder="jacob@example.com" required>
+                        <div class="invalid-tooltip">
+                          Please provide a valid email address.
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div  class= "checkout-form">
+                    <h4>2. Shipping Method</h4><br>
+                      Orders placed before 1:00PM EST Monday-Friday typically process the same day.<br>
+                      <div class=".container-input">
+                        <input type="radio" checked="checked" name="ship">
+                        <label> Standard (7-10 business days) – Rs. 0.00 </label> <br> 
+                        <input type="radio" name="ship">
+                        <label>  Second Day (2 business days) – Rs. 2500.00  </label> <br>
+                        <input type="radio" name="ship">
+                        <label>  Overnight (1 business day) – Rs. 3500.00 </label> <br>
+                      </div>
+                  </div><br>
+
+                  <div  class= "checkout-form">
+                      <h4>3. Pyment</h4><br>
+                      <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                              <label for="inputState">State</label>
+                              <select id="inputState" class="form-control">
+                                <option selected>VISA</option>
+                                <option>MasterCard</option>
+                                <option>American Express</option>
+                                <option>Discover</option>
+                              </select>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="validationTooltip03">Card Number</label>
+                            <input type="text" class="form-control" id="validationTooltip03" placeholder="1234 1234 1234 1234" required>
+                            <div class="invalid-tooltip">
+                              Please provide a valid number.
+                            </div>
+                          </div>
+                        </div> 
+                            <div class="form-row">                  
+                              <div class="col-md-6 mb-3">
+                                <label for="validationTooltip04">Security Code</label>
+                                <input type="text" class="form-control" id="validationTooltip04" placeholder="123" required>
+                                <div class="invalid-tooltip">
+                                  Please provide a valid code.
+                                </div>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>Expiration date</label>
+                                <select id="inputState" class="form-control">
+                                  <option >01</option>
+                                  <option>02</option>
+                                  <option selected>03</option>
+                                  <option>04</option>
+                                  <option >05</option>
+                                  <option>06</option>
+                                  <option >07</option>
+                                  <option>08</option>
+                                  <option >09</option>
+                                  <option>10</option>
+                                  <option >11</option>
+                                  <option>12</option>
+                                </select>
+                              </div>
+                              <div class="col-md-3 mb-3">
+                                <label>&nbsp;</label>
+                                <select id="inputState" class="form-control">
+                                  <option >2019</option>
+                                  <option>2020</option>
+                                  <option selected>2021</option>
+                                  <option>2022</option>
+                                  <option >2023</option>
+                                  <option>2024</option>
+                                  <option >2025</option>
+                                  <option>2026</option>
+                                  <option>2027</option>
+                                  <option>2028</option>
+                                  <option>2029</option>
+                                </select>
+                              </div>
+                            </div>
+
+                  </div>
+                      <button class="item-button">CHECKOUT</button>
+                </form>
+              
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
