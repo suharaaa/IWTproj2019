@@ -1,17 +1,31 @@
+<?php
+    include_once 'php/connection.php';
+    
+    $id = $_GET["id"];
+    $sql = "SELECT * FROM items WHERE id=$id";
+    $result = mysqli_query($conn, $sql);
+    $resultcheck = mysqli_num_rows($result);
+    
+    if($resultcheck == 0){
+        header("Location: 404.html");  
+        die(); 
+    }
+    
+    $product = mysqli_fetch_assoc($result);
+?>
+
 <html>
     <head>
-        <title>Women's</title>            
+        <title>
+            Item Details
+        </title>
             <link rel="stylesheet"  href="assets/css/womens.css">
             <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-            <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
             
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="./assets/js/itemdetail.js"></script>            
             <script src="./assets/js/bootstrap.min.js"></script>
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-            
-        
     </head>
 
     <header>
@@ -97,106 +111,101 @@
     </header>
 
     <body>
-
-        <!-- carousel -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="item-image-container text-center">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="images/IMG_6739.JPG" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/EA7-Hero-1.jpg" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="images/IMG_6731.JPG" class="d-block w-100" alt="...">
-                      </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                </div>
-                         </div>
-                    </div> 
-
-                    <!-- items -->
+            <div class="container">
                     <div class="row">
-                        <div class="col-md-4 col-sm-4">
-                            <div class="item-card">
-                                <div class="item-image-container text-center">
-                                    <img width="100%" src="images/12308184GO_14_f.jpg">
+                        <div class="col-md-6 col-sm-6"> 
+                                <div class="item-card">
+                                        <div class="item-image-container text-center">
+                                            <img width="100%" src="images/<?php echo $product["image"]?>">
+                                        </div>
                                 </div>
-                                    <h4 class="item-title">Sweatshirt in bonded virgin wool</h4>
-                                    <p class="item-price">Rs. 5000.00</p><span class="item-support">Tax Free</span>
-                                <a href="itemdetail.html"><button class="item-button" >Buy Now</button></a>
-                            </div>
                         </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="item-card">
-                                <div class="item-image-container text-center">
-                                    <img width="100%" src="images/13301017CL_14_f.jpg">
+                        <div class="col-md-6 col-sm-6"> 
+                                <div class="item-card">
+                                    <h2 class="item-title"><?php echo $product["title"] ?></h2>
+                                    <h4 class="item-price">Rs. <?php echo $product["price"] ?></h4>
+                                    <br><br>
+                                    <p class="item-des"><?php echo $product["description"] ?></p>
+                                    
+                                    <br>
+                                    <br>
+                                    <br>
+
+                                    <h5> Color </h5>
+                                    <div class=".container-input">
+                                        <label style = "color: #e90ea7;">
+                                            <input type="radio" name="radio">
+                                            Pale Pink   &nbsp;&nbsp;&nbsp;
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label style = "color: #ff0000;">
+                                            <input type="radio" name="radio">
+                                                Apple Red &nbsp;&nbsp;&nbsp;   
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label style = "color: #dfad7e;">
+                                            <input type="radio" checked="checked" name="radio">
+                                                Melon Orange
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+
+                                    <br>
+
+                                    <h5>Select SIZE (UK)</h5>
+                                    <!-- <div class>
+                                            <input type="radio" name="radio1">
+                                            Small   &nbsp;&nbsp;&nbsp;
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="radio1">
+                                                Medium &nbsp;&nbsp;&nbsp;   
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" checked="checked" name="radio1">
+                                                Large &nbsp;&nbsp;&nbsp;
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="radio">
+                                                Excel &nbsp;&nbsp;&nbsp;
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div> -->
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;2&nbsp;&nbsp;</button>
+                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;4&nbsp;&nbsp;</button>
+                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;6&nbsp;&nbsp;</button>
+                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;8&nbsp;&nbsp;</button>
+                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;10&nbsp;&nbsp;</button>
+                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;12&nbsp;&nbsp;</button>
+                                    </div>
+                                    <br><br>
+
+                                    <h5 class="my-1 mr-2" for="inlineFormCustomSelectPref">Quantity</h5>
+                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                        <option selected value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                    <br>
+
+                                    <button class="item-button" onclick="addCart()">Add to cart</button>
                                 </div>
-                                    <h4 class="item-title">Pleated wool crepe pants</h4>
-                                    <p class="item-price">Rs. 6600.00</p><span class="item-support">Tax Free</span>
-                                <button class="item-button">Buy Now</button>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="item-card">
-                                <div class="item-image-container text-center">
-                                    <img width="100%" src="images/41840299BS_16_f.jpg">
-                                </div>
-                                    <h4 class="item-title">blazer in crepe-effect bonded jersey</h4>
-                                    <p class="item-price">Rs. 4600.00</p><span class="item-support">Tax Free</span>
-                                <button class="item-button">Buy Now</button>
-                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4">
-                            <div class="item-card">
-                                <div class="item-image-container text-center">
-                                    <img width="100%" src="images/35405581JK_16_f.jpg">
-                                </div>
-                                    <h4 class="item-title">Striped silk shirt with side slits</h4>
-                                    <p class="item-price">Rs. 3800.00</p><span class="item-support">Tax Free</span>
-                                <button class="item-button">Buy Now</button>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="item-card">
-                                <div class="item-image-container text-center">
-                                    <img width="100%" src="images/Corduroy leggings with contrasting lateral stripes.jpg">
-                                </div>
-                                    <h4 class="item-title">Corduroy leggings with lateral stripes</h4>
-                                    <p class="item-price">Rs. 6500.00</p><span class="item-support">Tax Free</span>
-                                <button class="item-button">Buy Now</button>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <div class="item-card">
-                                <div class="item-image-container text-center">
-                                    <img width="100%" src="images/38808427KV_16_f.jpg">
-                                </div>
-                                    <h4 class="item-title">Cady shirt with tonal georgette hem</h4>
-                                    <p class="item-price">Rs. 4600.00</p><span class="item-support">Tax Free</span>
-                                <button class="item-button">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
+            </div>
+
     </body>
-    
     <!--FOOTER-->
     <footer >
             <div class="row"> 
