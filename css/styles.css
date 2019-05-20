@@ -18,9 +18,9 @@
 .item-price {
     text-transform: none;
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 20px;
     color: #774c60;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .item-support {
@@ -183,3 +183,45 @@ footer .center{
     color: #DAECF3;
 }
 
+/* size selector */
+input[name=selector] {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+  }
+  
+  label {
+    color: #585858;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 20px;
+    margin-bottom: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  input[name=selector]:checked + label {
+    color: #ececec;
+    /* changes the select box color */
+    background: #675f6b;
+  }
+  
+  
+  .radio-group {
+    border: solid 3px #cacaca;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  /* color selector */
+  input[name=sele] {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+  }
+  
+  input[name=sele]:checked + label {
+    color: #ececec;
+  }

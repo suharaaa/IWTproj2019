@@ -1,17 +1,21 @@
+<?php
+    include_once 'php/config.php';
+?>
+
 <html>
     <head>
         <title>
             Checkout
         </title>
-            <link rel="stylesheet"  href="assets/css/womens.css">
-            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet"  href="css/styles.css">
+            <link rel="stylesheet" href="css/bootstrap.min.css">
             
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
             <script src="./assets/js/bootstrap.min.js"></script>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-            
+            <script src="./assets/js/checkout.js"></script>
     </head>
   
     <header>
@@ -21,7 +25,7 @@
     
                 <!--Brand Logo-->
                 <a href="home.html" class="logo">
-                    <img src="images/logo1.png" width="75" height= "75" alt="ABSTRACT">
+                    <img src="images/diamond.png" width="75" height= "75" alt="ABSTRACT">
                 </a> 
             
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
@@ -96,12 +100,13 @@
         
 </header>
 
-    <body>
-     <div class="container">
+    <body >
+     <div class="container" style="margin-top: 80px;">
         <div class="row">
           <div class="col-md-8 col-sm-8 ">
-            <h2 class="item-title"> C H E C K O U T </h2><br>
-               <form method="post" action="php/checkout.php">
+            <h2 class="item-title" style="margin-top:20px"> C H E C K O U T </h2><br>              
+        
+              <form method="post" action="php/check.php">
                   <div  class= "checkout-form">
                       <h4>1. Shipping Adress</h4><br>
                 <div class="form-row">
@@ -130,7 +135,7 @@
                   </div>
                   <div class="col-md-6 mb-3">
                     <label for="validationTooltip03">Country</label>
-                    <input type="text" class="form-control" id="validationTooltip03" placeholder="United States" required>
+                    <input type="text" class="form-control" id="validationTooltip03" placeholder="United States" name="country" required>
                     <div class="invalid-tooltip">
                       Please provide a valid country.
                     </div>
@@ -139,14 +144,14 @@
                     <div class="form-row">                  
                       <div class="col-md-6 mb-3">
                         <label for="validationTooltip04">State</label>
-                        <input type="text" class="form-control" id="validationTooltip04" placeholder="Wisconsin" required>
+                        <input type="text" class="form-control" id="validationTooltip04" placeholder="Wisconsin" name="state" required>
                         <div class="invalid-tooltip">
                           Please provide a valid state.
                         </div>
                       </div>
                       <div class="col-md-6 mb-3">
                         <label for="validationTooltip05">Zip</label>
-                        <input type="text" class="form-control" id="validationTooltip05" placeholder="54303-2175" required>
+                        <input type="text" class="form-control" id="validationTooltip05" placeholder="54303-2175" name="zip" required>
                         <div class="invalid-tooltip">
                           Please provide a valid zip.
                         </div>
@@ -154,13 +159,13 @@
                     </div>
                     <div class="form-row">                  
                       <div class="col-md-6 mb-3">
-                        <label for="validationTooltip04">Phone Number</label>
-                        <input type="text" class="form-control" id="validationTooltip04" placeholder="(060) 458-9754" >
+                        <label for="validationTooltip06">Phone Number</label>
+                        <input type="text" class="form-control" id="validationTooltip06" placeholder="(060) 458-9754" name="pnum" >
                         
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label for="validationTooltip05">E-mail</label>
-                        <input type="text" class="form-control" id="validationTooltip05" placeholder="jacob@example.com" name="email" required>
+                        <label for="validationTooltip07">E-mail</label>
+                        <input type="text" class="form-control" id="validationTooltip07" placeholder="jacob@example.com" name="email" required>
                         <div class="invalid-tooltip">
                           Please provide a valid email address.
                         </div>
@@ -170,13 +175,13 @@
                   <div  class= "checkout-form">
                     <h4>2. Shipping Method</h4><br>
                       Orders placed before 1:00PM EST Monday-Friday typically process the same day.<br>
-                      <div class=".container-input">
-                        <input type="radio" checked="checked" name="ship">
-                        <label> Standard (7-10 business days) – Rs. 0.00 </label> <br> 
-                        <input type="radio" name="ship">
-                        <label>  Second Day (2 business days) – Rs. 2500.00  </label> <br>
-                        <input type="radio" name="ship">
-                        <label>  Overnight (1 business day) – Rs. 3500.00 </label> <br>
+                      <div class=".container-input" >
+                        <input type="radio" checked="checked" name="ship" value="Standard">
+                        <label> Standard (7-10 business days) : Rs. 1500.00 </label> <br> 
+                        <input type="radio" name="ship" value="Second Day">
+                        <label>  Second Day (2 business days) : Rs. 2800.00  </label> <br>
+                        <input type="radio" name="ship" value="Overnight">
+                        <label>  Overnight (1 business day) : Rs. 4500.00 </label> <br>
                       </div>
                   </div><br>
 
@@ -184,8 +189,8 @@
                       <h4>3. Pyment</h4><br>
                       <div class="form-row">
                           <div class="col-md-6 mb-3">
-                              <label for="inputState">State</label>
-                              <select id="inputState" class="form-control">
+                              <label for="inputState">Card Type</label>
+                              <select id="inputState" class="form-control" name="type">
                                 <option selected>VISA</option>
                                 <option>MasterCard</option>
                                 <option>American Express</option>
@@ -194,7 +199,7 @@
                           </div>
                           <div class="col-md-6 mb-3">
                             <label for="validationTooltip03">Card Number</label>
-                            <input type="text" class="form-control" id="validationTooltip03" placeholder="1234 1234 1234 1234" required>
+                            <input type="text" class="form-control" name="cnum" id="validationTooltip03" placeholder="1234 1234 1234 1234" required>
                             <div class="invalid-tooltip">
                               Please provide a valid number.
                             </div>
@@ -203,14 +208,14 @@
                             <div class="form-row">                  
                               <div class="col-md-6 mb-3">
                                 <label for="validationTooltip04">Security Code</label>
-                                <input type="text" class="form-control" id="validationTooltip04" placeholder="123" required>
+                                <input type="text" class="form-control" name="code" id="validationTooltip04" placeholder="123" required>
                                 <div class="invalid-tooltip">
                                   Please provide a valid code.
                                 </div>
                               </div>
                               <div class="col-md-3 mb-3">
                                 <label>Expiration date</label>
-                                <select id="inputState" class="form-control">
+                                <select id="inputState" class="form-control" name="day">
                                   <option >01</option>
                                   <option>02</option>
                                   <option selected>03</option>
@@ -227,7 +232,7 @@
                               </div>
                               <div class="col-md-3 mb-3">
                                 <label>&nbsp;</label>
-                                <select id="inputState" class="form-control">
+                                <select id="inputState" class="form-control" name="year">
                                   <option >2019</option>
                                   <option>2020</option>
                                   <option selected>2021</option>
@@ -244,9 +249,21 @@
                             </div>
 
                   </div>
-                      <button class="item-button">CHECKOUT</button>
+                      <button name="checko" class="item-button">CHECKOUT</button>
                 </form>
-              
+              <br><br>
+            </div>
+          </div>
+        </div>
+
+        <!-- cart -->
+        <div class="col-md-4 col-sm-4 ">
+          <div class="card" style="width: 18rem;">
+            <img src="image/" class="card-img-top" >
+            <div class="card-body">
+              <h3 class="card-text"></h3>
+              <p class="card-text"></p>
+              <p class="card-text"></p>
             </div>
           </div>
         </div>

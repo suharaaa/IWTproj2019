@@ -1,10 +1,15 @@
 <?php
-    include_once 'php/connection.php';
+    include_once 'php/config.php';
     
     $id = $_GET["id"];
+
     $sql = "SELECT * FROM items WHERE id=$id";
     $result = mysqli_query($conn, $sql);
     $resultcheck = mysqli_num_rows($result);
+
+    $colorquery = "SELECT * FROM color WHERE itemid=$id";
+    $colorresult = mysqli_query($conn, $colorquery);
+    $colorresultcheck = mysqli_num_rows($colorresult);
     
     if($resultcheck == 0){
         header("Location: 404.html");  
@@ -12,15 +17,17 @@
     }
     
     $product = mysqli_fetch_assoc($result);
+    mysqli_close($conn);
 ?>
 
 <html>
     <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             Item Details
         </title>
-            <link rel="stylesheet"  href="assets/css/womens.css">
-            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet"  href="css/styles.css">
+            <link rel="stylesheet" href="css/bootstrap.min.css">
             
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -35,7 +42,7 @@
             
                         <!--Brand Logo-->
                         <a href="home.html" class="logo">
-                            <img src="images/logo1.png" width="75" height= "75" alt="ABSTRACT">
+                            <img src="images/font.png" width="75" height= "75" alt="ABSTRACT">
                         </a> 
                     
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
@@ -49,7 +56,7 @@
                                 <ul class="nav navbar-nav ">
                                     <!--WOMEN-DROPDOWN-->
                                     <li class="dropdown">
-                                        <a href="women.html" class="dropdown-toggle nav-link" data-toggle="dropdown" >WOMEN
+                                        <a href="women.php" class="dropdown-toggle nav-link" data-toggle="dropdown" >WOMEN
                                             <span class="caret"></span>
                                         </a>
                                         <ul class="dropdown-menu">
@@ -111,7 +118,22 @@
     </header>
 
     <body>
-            <div class="container">
+
+     <!-- breadcrumb -->
+        <div class="row" style="margin-top: 80px;">
+            <div class="col-md-12 col-sm-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?php echo $product["category"]?>.php"><?php echo $product["category"]?></a></li>
+                        <li class="breadcrumb-item"><a href="<?php echo $product["type"]?>.php"><?php echo $product["type"]?></a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?php echo $product["title"]?></li>
+                    </ol>
+                </nav>
+            </div>
+        </div> 
+        
+            <div class="container" >
                     <div class="row">
                         <div class="col-md-6 col-sm-6"> 
                                 <div class="item-card">
@@ -128,64 +150,40 @@
                                     <p class="item-des"><?php echo $product["description"] ?></p>
                                     
                                     <br>
-                                    <br>
-                                    <br>
-
-                                    <h5> Color </h5>
-                                    <div class=".container-input">
-                                        <label style = "color: #e90ea7;">
-                                            <input type="radio" name="radio">
-                                            Pale Pink   &nbsp;&nbsp;&nbsp;
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label style = "color: #ff0000;">
-                                            <input type="radio" name="radio">
-                                                Apple Red &nbsp;&nbsp;&nbsp;   
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label style = "color: #dfad7e;">
-                                            <input type="radio" checked="checked" name="radio">
-                                                Melon Orange
-                                            <span class="checkmark"></span>
-                                        </label>
+                                    <form metho9d="post">
+                                
+                                    <h6> Color : </h6>
+                                    <div class="radio-group">
+                                        <?php 
+                                            while($color = mysqli_fetch_assoc($colorresult)) {
+                                                echo '<input type="radio" id="option-'.$color["id"].'" name="sele" >
+                                                <label for="option-'.$color["id"].'" style="background:'.$color["code"].'"> '.$color["name"].' </label>';
+                                            }
+                                        ?>
                                     </div>
 
                                     <br>
 
-                                    <h5>Select SIZE (UK)</h5>
-                                    <!-- <div class>
-                                            <input type="radio" name="radio1">
-                                            Small   &nbsp;&nbsp;&nbsp;
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="radio1">
-                                                Medium &nbsp;&nbsp;&nbsp;   
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" checked="checked" name="radio1">
-                                                Large &nbsp;&nbsp;&nbsp;
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label>
-                                            <input type="radio" name="radio">
-                                                Excel &nbsp;&nbsp;&nbsp;
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div> -->
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;2&nbsp;&nbsp;</button>
-                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;4&nbsp;&nbsp;</button>
-                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;6&nbsp;&nbsp;</button>
-                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;8&nbsp;&nbsp;</button>
-                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;10&nbsp;&nbsp;</button>
-                                        <button type="button" class="btn btn-secondary">&nbsp;&nbsp;12&nbsp;&nbsp;</button>
+                                    <h6>Select SIZE (UK) :</h6>
+                                
+                                    <div class="radio-group">
+                                        <input type="radio" id="option1" name="selector">
+                                            <label for="option1">2</label>
+                                        <input type="radio" id="option2" name="selector">
+                                            <label for="option2">4</label>
+                                            <input type="radio" id="option3" name="selector">
+                                            <label for="option3">6</label>
+                                        <input type="radio" id="option4" name="selector">
+                                            <label for="option4">8</label>
+                                        <input type="radio" id="option5" name="selector">
+                                            <label for="option5">10</label>
+                                        <input type="radio" id="option6" name="selector">
+                                            <label for="option6">12</label>
                                     </div>
-                                    <br><br>
+                                    <br>
 
-                                    <h5 class="my-1 mr-2" for="inlineFormCustomSelectPref">Quantity</h5>
-                                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                                    <h6 class="my-1 mr-2" for="selectQty">Quantity :</h6>
+                                    <select class="custom-select my-1 mr-sm-2" id="selectQty">
                                         <option selected value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -200,11 +198,37 @@
                                     <br>
 
                                     <button class="item-button" onclick="addCart()">Add to cart</button>
+                                    </form>
                                 </div>
+                        
+                    
+            
+
+            <!-- collapse -->
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0" style="font-weight: bold">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            SHIPPING AND RETURNS
+                            </button>
+                        </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <h6 style="font-weight: bold">SHIPPING</h5>
+                            <p>Most items are shipped from our warehouse within 1-2 full business days except where otherwise noted. Shipping restrictions may apply. </p>
+                            <h6 style="font-weight: bold">RETURNS</h6>
+                            <p>We accept online returns within 30 days of shipping confirmation, and online returns from Canada within 40 days of shipping confirmation. In order to process your return, items must be unworn and tags must be attached. Items marked Final Sale are not eligible for a return, refund or credit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
                         </div>
                     </div>
             </div>
 
+            <br>
     </body>
     <!--FOOTER-->
     <footer >
