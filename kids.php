@@ -17,7 +17,7 @@
             <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
             
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-            <script src="./assets/js/bootstrap.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -27,84 +27,102 @@
 
     <header>
                 <!--NAVBAR-->
-                <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
 
             
-                        <!--Brand Logo-->
-                        <a href="home.html" class="logo">
-                            <img src="images/font.png" width="75" height= "75" alt="ABSTRACT">
-                        </a> 
-                    
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
-                            <div class="container" onclick="toggleFunction(this)">
-                                <div class="bar1"></div>
-                                <div class="bar2"></div>
-                                <div class="bar3"></div>
-                            </div> 
-                        </button>              
-                        <div class="collapse navbar-collapse flex-row-reverse" id="myNavbar" >
-                                <ul class="nav navbar-nav ">
-                                    <!--WOMEN-DROPDOWN-->
-                                    <li class="dropdown">
-                                        <a href="women.php" class="dropdown-toggle nav-link" data-toggle="dropdown" >WOMEN
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">SHIRTS</a></li>
-                                            <li><a class="dropdown-item" href="#">T-SHIRTS</a></li>
-                                            <li><a class="dropdown-item" href="#">DRESSES</a></li>
-                                            <li><a class="dropdown-item" href="#">SWIMWEAR</a></li>
-                                            <li><a class="dropdown-item" href="#">TROUSERS</a></li>
-                                            <!-- <li><a class="dropdown-item" href="#">PANTS</a></li> -->
-                                            <li><a class="dropdown-item" href="#">SHORTS</a></li>
-                                            <!-- <li><a class="dropdown-item" href="#">COATS</a></li> -->
-                                            <li><a class="dropdown-item" href="#">JACKETS</a></li>
-                                            <!-- <li><a class="dropdown-item" href="#">SWEATSHIRTS</a></li> -->
-                                            <li><a class="dropdown-item" href="#">HOODIES</a></li>
-                                        </ul>
-                                    </li>
-                                    <!--MEN-DROPDOWN-->
-                                    <li class="dropdown">
-                                        <a href="men.php" class="dropdown-toggle nav-link" data-toggle="dropdown" >MEN
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">SHIRTS</a></li>
-                                            <li><a class="dropdown-item" href="#">T-SHIRTS</a></li>
-                                            <li><a class="dropdown-item" href="#">SUITS & BLAZERS</a></li>
-                                            <!-- <li><a class="dropdown-item" href="#">SWIMWEAR</a></li> -->
-                                            <li><a class="dropdown-item" href="#">TROUSERS</a></li>
-                                            <!-- <li><a class="dropdown-item" href="#">PANTS</a></li> -->
-                                            <li><a class="dropdown-item" href="#">SHORTS</a></li>
-                                            <!-- <li><a class="dropdown-item" href="#">COATS</a></li> -->
-                                            <li><a class="dropdown-item" href="#">JACKETS</a></li>
-                                            <!-- <li><a class="dropdown-item" href="#">SWEATSHIRTS</a></li> -->
-                                            <li><a class="dropdown-item" href="#">HOODIES</a></li>
-                                            <!-- <li><a class="dropdown-item" href="#">POLOS</a></li> -->
-                                        </ul>
-                                    </li>
-                                    <!--KIDS-DROPDOWN-->
-                                    <li class="dropdown">
-                                        <a href="kids.php" class="dropdown-toggle nav-link" data-toggle="dropdown" >KIDS
-                                            <span class="caret"></span>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">GIRLS</a></li>
-                                            <li><a class="dropdown-item" href="#">BOYS</a></li>
-                                            <li><a class="dropdown-item" href="#">BABY</a></li>
-                                        </ul>
-                                    </li>
-                                    <li ><a href="sale.html" class="nav-link">SALE</a></li>
-                                    <li><a href="abXme.html" class="nav-link">ABXME</a></li>
-                                    <li><a href="#" class="nav-link"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" class="nav-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" class="nav-link"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                
-                                </ul>
-                        </div>   
-                    </nav>
-                
+<!--Brand Logo-->
+<a href="index1.html" class="logo">
+    <img src="images/logo.png" width="75" height= "75" alt="ABSTRACT">
+</a> 
+
+<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+    <div class="container" onclick="toggleFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div> 
+</button>              
+<div class="collapse navbar-collapse flex-row-reverse" id="myNavbar" >
+    <ul class="nav navbar-nav ">
+        <!--WOMEN-DROPDOWN-->
+        <li class="dropdown">
+            <a href="women.php" class="dropdown-toggle nav-link" data-toggle="dropdown" >WOMEN</a>
+                <span class="caret"></span>
+            
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="women.php">SKIRTS</a></li>
+                <li><a class="dropdown-item" href="women.php">T-SHIRTS</a></li>
+                <li><a class="dropdown-item" href="women.php">DRESSES</a></li>
+                <li><a class="dropdown-item" href="women.php">SWIMWEAR</a></li>
+                <li><a class="dropdown-item" href="women.php">JEANS</a></li>
+                <li><a class="dropdown-item" href="women.php">PANTS</a></li>
+                <li><a class="dropdown-item" href="women.php">SHORTS</a></li>
+                <li><a class="dropdown-item" href="women.php">COATS</a></li>
+                <li><a class="dropdown-item" href="women.php">JACKETS</a></li>
+                <li><a class="dropdown-item" href="women.php">SWEATSHIRTS</a></li>
+                <li><a class="dropdown-item" href="women.php">HOODIES</a></li>
+            </ul>
+        </li>
+        <!--MEN-DROPDOWN-->
+        <li class="dropdown">
+            <a href="men.php" class="dropdown-toggle nav-link" data-toggle="dropdown" >MEN</a>
+                <span class="caret"></span>
+            
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="men.php">SHIRTS</a></li>
+                <li><a class="dropdown-item" href="men.php">T-SHIRTS</a></li>
+                <li><a class="dropdown-item" href="men.php">SUITS & BLAZERS</a></li>
+                <li><a class="dropdown-item" href="men.php">SWIMWEAR</a></li>
+                <li><a class="dropdown-item" href="men.php">JEANS</a></li>
+                <li><a class="dropdown-item" href="men.php">PANTS</a></li>
+                <li><a class="dropdown-item" href="men.php">SHORTS</a></li>
+                <li><a class="dropdown-item" href="men.php">COATS</a></li>
+                <li><a class="dropdown-item" href="men.php">JACKETS</a></li>
+                <li><a class="dropdown-item" href="men.php">SWEATSHIRTS</a></li>
+                <li><a class="dropdown-item" href="men.php">HOODIES</a></li>
+                <li><a class="dropdown-item" href="men.php">POLOS</a></li>
+            </ul>
+        </li>
+        <!--KIDS-DROPDOWN-->
+        <li class="dropdown">
+            <a href="kids.</a>"class="dropdown-toggle nav-link" data-toggle="dropdown" >KIDS
+                <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="kids.php">GIRLS</a></li>
+                <li><a class="dropdown-item" href="kids.php">BOYS</a></li>
+                <li><a class="dropdown-item" href="kids.php">BABY</a></li>
+            </ul>
+        </li>
+        <li><a href="abXme.html" class="nav-link">ABXME</a></li>
+        <li><a href="cart.php" class="nav-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+        <li><a href="login.php" class="nav-link"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        <!-- <li><a href="" class="nav-link searchOverlay" ><i class="fa fa-search"  onclick="openSearch()" aria-hidden="true"></i>
+            
+            <div id="myOverlay" class="overlay">
+                <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+                <div class="overlay-content">
+                  <form action="action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+              </div></a></li> -->
+              
+            <li><a class="nav-link">
+                    <div class="search-container">
+                        <div class="input-group">
+                        <form action="search.php" method="GET">
+                            <input type="text" name="query" />
+                            <input type="submit" value="Search" />
+                        </form>
+                        </div>
+                    </div>
+                </a>
+            </li>
+    </ul>
+</div>   
+</nav>
     </header>
 
     <body>

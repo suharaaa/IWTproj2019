@@ -27,7 +27,7 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-header("Location: ../women.php");
+header("Location: ../home1.php");
 
 mysqli_close($conn);
 
