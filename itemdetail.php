@@ -145,7 +145,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="home.html">Home</a></li>
                         <li class="breadcrumb-item"><a href="<?php echo $product["category"]?>.php"><?php echo $product["category"]?></a></li>
-                        <li class="breadcrumb-item"><a href="<?php echo $product["type"]?>.php"><?php echo $product["type"]?></a></li>
+                        <li class="breadcrumb-item"><?php echo $product["type"]?></a></li>
                         <li class="breadcrumb-item active" aria-current="page"><?php echo $product["title"]?></li>
                     </ol>
                 </nav>
@@ -166,7 +166,7 @@
                                 <!-- sending data to tempcart -->
                                 <form method="post" action="php/ addcart.php">
 
-                                <input type="hidden" name="item" value="<?php $prouct["id"] ?>" > 
+                                
                                     <h2 class="item-title" name="iname"><?php echo $product["title"] ?></h2>
                                     <h4 class="item-price" name="iprice">Rs. <?php echo $product["price"] ?></h4>
                                     <br><br>

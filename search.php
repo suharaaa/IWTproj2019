@@ -21,8 +21,8 @@
     </head>
 
     <header>
-                <!--NAVBAR-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
 
             
 <!--Brand Logo-->
@@ -127,6 +127,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                        <!-- <li class="breadcrumb-item"><php echo $results["type"]?></a></li> -->
                        
                     </ol>
                 </nav>
