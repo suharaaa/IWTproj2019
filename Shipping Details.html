@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Abstract - Shipping Details</title>
+
+<header>
+
+	        <!--NAVBAR-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+                            
+            <div class="container-fluid">
+                                    
+                <div class="navbar-header">
+                    <a href="#" class="logo">
+                        <img src="images/logo1.png" width="75" height= "75" alt="ABSTRACT">
+                    </a>    
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                                    
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar" >
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--WOMEN-DROPDOWN-->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#women">WOMEN
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">SKIRTS</a></li>
+                                <li><a href="#">T-SHIRTS</a></li>
+                                <li><a href="#">DRESSES</a></li>
+                                <li><a href="#">SWIMWEAR</a></li>
+                                <li><a href="#">JEANS</a></li>
+                                <li><a href="#">PANTS</a></li>
+                                <li><a href="#">SHORTS</a></li>
+                                <li><a href="#">COATS</a></li>
+                                <li><a href="#">JACKETS</a></li>
+                                <li><a href="#">SWEATSHIRTS</a></li>
+                                <li><a href="#">HOODIES</a></li>
+                            </ul>
+                        </li>
+                        <!--MEN-DROPDOWN-->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#men">MEN
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">SHIRTS</a></li>
+                                <li><a href="#">T-SHIRTS</a></li>
+                                <li><a href="#">SUITS & BLAZERS</a></li>
+                                <li><a href="#">SWIMWEAR</a></li>
+                                <li><a href="#">JEANS</a></li>
+                                <li><a href="#">PANTS</a></li>
+                                <li><a href="#">SHORTS</a></li>
+                                <li><a href="#">COATS</a></li>
+                                <li><a href="#">JACKETS</a></li>
+                                <li><a href="#">SWEATSHIRTS</a></li>
+                                <li><a href="#">HOODIES</a></li>
+                                <li><a href="#">POLOS</a></li>
+                            </ul>
+                        </li>
+                        <!--KIDS-DROPDOWN-->
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#kids">KIDS
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">GIRLS</a></li>
+                                <li><a href="#">BOYS</a></li>
+                                <li><a href="#">BABY</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#sale">SALE</a></li>
+                        <li><a href="#abxme">ABXME</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-heart"></span></a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+                
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
+
+</header>
+<style>
+
+body{
+	background-color:rgb(100, 192, 165);
+}
+
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    background-color: #06103f;
+    font-size: 16px;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+
+
+.navbar li a, .navbar .navbar-brand {
+    color: #d5d5d5;
+}
+
+
+
+.navbar-nav li a:hover {
+    color: #fff;
+
+}
+
+
+
+.navbar-nav li.active a {
+    color: #fff;
+    background-color: #29292c;
+}
+
+
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+
+.open .dropdown-toggle {
+    color: #fff;
+    background-color: #555;
+}
+
+
+
+.dropdown-menu li a {
+    color: #000;
+}
+
+
+
+
+.dropdown-menu li a:hover{
+    background-color: rgb(24, 103, 156);
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+
+
+table {
+  border-collapse: collapse;
+  width:70%;
+  position:fixed;
+  left:20px;
+}
+
+table, td, th {
+  border-style:groove;
+}
+
+th{
+padding:15px;
+text-align:center;
+background-color:grey;
+color:black;
+width:350px;
+
+}
+
+
+td{
+text-align:left;
+vertical-align:center;
+height:15px;
+width:200px;
+font-style:italic;
+
+}
+
+
+</style>
+</head>
+<body>
+<div style = "position:absolute;top:10%">
+<h4 style="padding : 0px 10px">Shippping and handling</h4>
+<h5 style = "padding:0px 10px;font-style:italic">Choose the shipping options that best suite your delivery needs</h5>
+</br>
+<h4 style="padding : 0px 10px">SHIPPING OPTIONS AND COST</H4>
+
+<table >
+<tr>
+	<th >Free Shipping over Rs.8000</th>
+	<td>Rs.800 for purchases below Rs.8000</td>
+	<td>5-7 business days</td>
+</tr>
+
+<tr>
+	<th >Standard Shipping</th>
+	<td>Rs.1500</td>
+	<td>3-5 business days</td>
+</tr>
+
+<tr>
+	<th>Express Shipping</th>
+	<td>Rs.2800</td>
+	<td>2-3 business days</td>
+</tr>
+
+<tr>
+	<th>Next Day Shipping</th>
+	<td>Rs.4500</td>
+	<td>1-2 business days</td>
+</tr>
+
+
+</table>
+
+</div>
+
+</body>
+
+<footer>
+	
+</footer>
+</html>

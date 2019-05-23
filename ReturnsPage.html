@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Returns Page - Abstract</title>
+
+<header>
+
+          <!--NAVBAR-->
+          <nav class="navbar navbar-default navbar-fixed-top">
+                            
+              <div class="container-fluid">
+                                      
+                  <div class="navbar-header">
+                      <a href="#" class="logo">
+                          <img src="images/logo1.png" width="75" height= "75" alt="ABSTRACT">
+                      </a>    
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                                      
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar" >
+                      <ul class="nav navbar-nav navbar-right">
+                          <!--WOMEN-DROPDOWN-->
+                          <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#women">WOMEN
+                                  <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">SKIRTS</a></li>
+                                  <li><a href="#">T-SHIRTS</a></li>
+                                  <li><a href="#">DRESSES</a></li>
+                                  <li><a href="#">SWIMWEAR</a></li>
+                                  <li><a href="#">JEANS</a></li>
+                                  <li><a href="#">PANTS</a></li>
+                                  <li><a href="#">SHORTS</a></li>
+                                  <li><a href="#">COATS</a></li>
+                                  <li><a href="#">JACKETS</a></li>
+                                  <li><a href="#">SWEATSHIRTS</a></li>
+                                  <li><a href="#">HOODIES</a></li>
+                              </ul>
+                          </li>
+                          <!--MEN-DROPDOWN-->
+                          <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#men">MEN
+                                  <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">SHIRTS</a></li>
+                                  <li><a href="#">T-SHIRTS</a></li>
+                                  <li><a href="#">SUITS & BLAZERS</a></li>
+                                  <li><a href="#">SWIMWEAR</a></li>
+                                  <li><a href="#">JEANS</a></li>
+                                  <li><a href="#">PANTS</a></li>
+                                  <li><a href="#">SHORTS</a></li>
+                                  <li><a href="#">COATS</a></li>
+                                  <li><a href="#">JACKETS</a></li>
+                                  <li><a href="#">SWEATSHIRTS</a></li>
+                                  <li><a href="#">HOODIES</a></li>
+                                  <li><a href="#">POLOS</a></li>
+                              </ul>
+                          </li>
+                          <!--KIDS-DROPDOWN-->
+                          <li class="dropdown">
+                              <a class="dropdown-toggle" data-toggle="dropdown" href="#kids">KIDS
+                                  <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">GIRLS</a></li>
+                                  <li><a href="#">BOYS</a></li>
+                                  <li><a href="#">BABY</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#sale">SALE</a></li>
+                          <li><a href="#abxme">ABXME</a></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-heart"></span></a></li>
+                          <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+                  
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/javascript.js"></script>
+
+
+</header>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body{
+  background-color:rgb(100, 192, 165);
+}
+
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    background-color: #06103f;
+    font-size: 16px;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+
+
+.navbar li a, .navbar .navbar-brand {
+    color: #d5d5d5;
+}
+
+
+
+.navbar-nav li a:hover {
+    color: #fff;
+
+}
+
+
+
+.navbar-nav li.active a {
+    color: #fff;
+    background-color: #29292c;
+}
+
+
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+
+.open .dropdown-toggle {
+    color: #fff;
+    background-color: #555;
+}
+
+
+
+.dropdown-menu li a {
+    color: #000;
+}
+
+
+
+
+.dropdown-menu li a:hover{
+    background-color: rgb(24, 103, 156);
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+.collapsible {
+  background-color: #B7BDAE;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1; 
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(46, 90, 116);
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+<div style = "position:absolute;top:10%">
+
+<h2>Returns</h2>
+
+<p>Tried it on and didn’t love it? Simply fill out the Return Form included in your parcel and send the items back to us. Returns within 30 days of purchase will be refunded to the original form of payment.</p>
+
+</br>
+
+<h4>RETURNS AND REFUND</h4>
+
+<button class="collapsible">FREE RETURN OR EXCHANGE</button>
+<div class="content">
+<p>You are always welcome to return, or exchange. You have 30 days to decide if an item is right for you. We offer exchanges and refunds on garments, swimwear (with hygienic seal) with a receipt within 30 days of purchase. We will issue a refund to the original form of payment. Please allow up to 14 days for your transaction to process. </br></br>
+
+Just bring the e-receipt attached to your shipping confirmation e-mail or the packing slip along with the item(s) you wish to return/exchange to the store. </br> </br> 
+
+For more information about refunds in-store, please refer to the 'Refunds' section.</br></br>
+
+Please note that incorrect orders, such as missing or incorrect items, cannot be returned in our stores and must be returned by mail.</p>
+</div>
+<button class="collapsible">YOU CAN EASILY RETURNS ITEMS BY FOLLOWING THESE STEPS</button>
+<div class="content">
+  1. Fill out the Return Form that was included in your parcel, using the code that best explains your reason for returning.<br>
+<br>
+2. Tear off the return slip and place this, together with the items you wish to return in a suitable bag or box, e.g. the one you received your parcel in.<br>
+<br>
+3. Attach the self-adhesive return label, which will be included with your order, and take the parcel to any Mailbox or Post Office of your choice.<br>
+<br>
+Each parcel contains a pre-printed return address label.<br>
+<br>
+If you do not wish to use this label, we recommend that you send your return with a traceable carrier such as FedEx, using the adress listed below.<br>
+Keep the Return Tracking Number from the package you are returning to ensure that the package is returned to our warehouse.<br>
+Abstract is not responsible for packages sent with a return label not provided by Abstract.Abstract does not accept C.O.D. deliveries.<br>
+<br>
+The address to our warehouse is:<br>
+281 Airtech Parkway<br>
+Dock Door 42<br>
+Plainfield, SL 46168<br>
+</div>
+<button class="collapsible">REFUNDS</button>
+<div class="content">
+  <p>   <b>Returned by mail</b>   <br> We will refund the value of your
+  returned items to the original   form of payment used for the purchase.</p>
+  <p>You will receive a Return Note by email when we have processed your
+  return and refund. Please allow up to 2 weeks for the credit to be
+  reflected in your account. Allow up to 2 billing cycles for the credit
+  to appear on your credit card statement.<br> </p>
+  <p>   <b>Gift Card</b>   <br> If you want to return items that were
+  paid for using Abstract   Gift Cards, then you will be issued an e-gift
+  card with an updated   balance, even if you paid with a physical gift
+  card. You will receive   your new Abstract e-gift card via email within
+  24 hours of your   processed return.<br> <br> If you used an
+  Abstract Gift Card and   another payment method, we will first issue
+  you a new e-gift card for the amount spent using the Abstract Gift
+  Card. The remaining balance  will be refunded to the second payment
+  method used for purchase.<br>   <br> For example: you placed an
+  order totaling Rs.2000, and you paid   Rs.750 by gift card and Rs.1250 with a
+  credit card. You decide to return Rs.1000  worth of items. We will refund
+  Rs.750 to a new e-gift card, and Rs.250 to your credit card.<br> <br>
+  <br> 
+  <p>For our legal and privacy Conditions, click <a href="">here</a>.</p>
+  </div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } 
+    else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</div>
+</body>
+</html>
